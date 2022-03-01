@@ -240,8 +240,10 @@ template {
 }
 h1 {
   font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
 }
 
 h2 {
   font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
 }

@@ -1,0 +1,30 @@
+.main-nav {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky; 
+    top: 0; 
+    z-index: 10; 
+    background-color: $background;
+    font-family: $headingFont; 
+    text-transform: uppercase;
+
+    .logo {
+        a {
+            border-bottom: none;  
+            font-size: 2rem; 
+
+            &:hover,
+            &:focus {
+                border-bottom: none; 
+                color: $accent; 
+            }
+        }
+    }
+
+    ul {
+        display: flex; 
+        flex-direction: row; 
+        
+    }
+}

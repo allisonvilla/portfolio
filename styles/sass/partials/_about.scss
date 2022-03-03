@@ -5,6 +5,12 @@
     .img-container {
         width: 40%; 
         margin-right: 40px; 
+
+        img {
+            width: 400px;
+            height: 500px; 
+            object-fit: cover;
+        }
     }
 
     .text-container {

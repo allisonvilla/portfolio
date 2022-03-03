@@ -487,6 +487,12 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   width: 40%;
   margin-right: 40px;
 }
+.about-content .img-container img {
+  width: 400px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .about-content .text-container {
   width: calc(60% - 40px);
 }

@@ -37,10 +37,15 @@
             margin-left: 35px; 
             display: flex;
             align-items: center; 
+
+            .resume {
+                color: $accent; 
+            }
         }
     }
 }
 
+// Class that is applied via JavaScript upon a specified amount of vertical scroll
 .scrolled {
     border-bottom: 1px solid rgba($color: $accent, $alpha: 0.3); 
     box-shadow: rgba($color: $accent, $alpha: 0.25) 0px 2px 5px -1px, rgba($color: $accent, $alpha: 0.3) 0px 1px 3px -1px;

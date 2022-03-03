@@ -346,6 +346,8 @@ a:hover, a:focus {
 }
 .main-nav .logo a {
   border-bottom: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-size: 1.3rem;
 }
 .main-nav .logo a:hover, .main-nav .logo a:focus {

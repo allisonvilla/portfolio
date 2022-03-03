@@ -401,8 +401,8 @@ header {
           justify-content: center;
 }
 header .wrapper {
-  -webkit-transform: translateY(-10vh);
-          transform: translateY(-10vh);
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,27 +414,22 @@ header .wrapper {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+header h2 {
+  margin-left: 2px;
+}
 header .arrow-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-}
-header .arrow-container h2 {
-  margin-left: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 60px;
 }
 header .arrow-container a {
   border-bottom: none;
   font-size: 3rem;
-  -ms-flex-item-align: center;
-      align-self: center;
-  position: fixed;
-  left: 14%;
-  top: 110%;
   font-weight: 500;
 }
 header .arrow-container a:hover, header .arrow-container a:focus {

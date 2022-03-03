@@ -1,0 +1,47 @@
+.tools {
+    ul {
+        display: flex; 
+        flex-wrap: wrap;
+
+        li {
+            display: flex; 
+            flex-direction: column; 
+            text-align: center; 
+            width: 15%; 
+            margin-bottom: 15px; 
+
+            i {
+                font-size: 2.5rem; 
+                margin-bottom: 10px; 
+            }
+        }
+    }
+}
+
+.project-container {
+    h3 {
+        font-size: 1.5rem; 
+    }
+    .description {
+        display: flex; 
+
+        .project-img {
+            width: 40%; 
+            margin-right: 50px; 
+
+            img {
+                width: 100%;
+                object-fit: cover; 
+                box-shadow: 0 0 0.75em 0 rgba($color: $body, $alpha: 0.5);
+            }
+        }
+
+        .project-text {
+            width: calc(60% - 50px);
+
+            a {
+                border-bottom: 2px solid $accent; 
+            }
+        }
+    }
+}

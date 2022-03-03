@@ -40,6 +40,15 @@
 
             .resume {
                 color: $accent; 
+                display: flex; 
+            }
+
+            .icon-container {
+                font-size: 0.8rem; 
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                margin-left: 7px; 
             }
         }
     }

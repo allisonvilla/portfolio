@@ -235,15 +235,15 @@ template {
   src: url("../assets/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: "EB Garamond";
-  src: url("../assets/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+  font-family: "Josefin Sans";
+  src: url("../assets/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
 }
 html {
   font-size: 125%;
 }
 
 body {
-  font-family: "EB Garamond", serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.04rem;
@@ -332,6 +332,10 @@ a:hover, a:focus {
   -webkit-box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.6em -0.5em;
           box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.6em -0.5em;
   text-shadow: 1px -2.5px 6.5px #82C0CC;
+}
+
+img {
+  max-width: 100%;
 }
 
 .main-nav {
@@ -478,4 +482,17 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.about-content .img-container {
+  width: 40%;
+  margin-right: 40px;
+}
+.about-content .text-container {
+  width: calc(60% - 40px);
+}
+.about-content p {
+  margin: 0;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 200;
 }

@@ -1,28 +1,32 @@
-EB Garamond Variable Font
-=========================
+Josefin Sans Variable Font
+==========================
 
-This download contains EB Garamond as both variable fonts and static fonts.
+This download contains Josefin Sans as both variable fonts and static fonts.
 
-EB Garamond is a variable font with this axis:
+Josefin Sans is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
-  EB_Garamond/EBGaramond-VariableFont_wght.ttf
-  EB_Garamond/EBGaramond-Italic-VariableFont_wght.ttf
+  JosefinSans-VariableFont_wght.ttf
+  JosefinSans-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for EB Garamond:
-  EB_Garamond/static/EBGaramond-Regular.ttf
-  EB_Garamond/static/EBGaramond-Medium.ttf
-  EB_Garamond/static/EBGaramond-SemiBold.ttf
-  EB_Garamond/static/EBGaramond-Bold.ttf
-  EB_Garamond/static/EBGaramond-ExtraBold.ttf
-  EB_Garamond/static/EBGaramond-Italic.ttf
-  EB_Garamond/static/EBGaramond-MediumItalic.ttf
-  EB_Garamond/static/EBGaramond-SemiBoldItalic.ttf
-  EB_Garamond/static/EBGaramond-BoldItalic.ttf
-  EB_Garamond/static/EBGaramond-ExtraBoldItalic.ttf
+in those cases you can use the static font files for Josefin Sans:
+  static/JosefinSans-Thin.ttf
+  static/JosefinSans-ExtraLight.ttf
+  static/JosefinSans-Light.ttf
+  static/JosefinSans-Regular.ttf
+  static/JosefinSans-Medium.ttf
+  static/JosefinSans-SemiBold.ttf
+  static/JosefinSans-Bold.ttf
+  static/JosefinSans-ThinItalic.ttf
+  static/JosefinSans-ExtraLightItalic.ttf
+  static/JosefinSans-LightItalic.ttf
+  static/JosefinSans-Italic.ttf
+  static/JosefinSans-MediumItalic.ttf
+  static/JosefinSans-SemiBoldItalic.ttf
+  static/JosefinSans-BoldItalic.ttf
 
 Get started
 -----------

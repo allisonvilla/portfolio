@@ -4,13 +4,13 @@
     src: url('../assets/Quicksand/Quicksand-VariableFont_wght.ttf'); 
 }
 @font-face {
-    font-family: 'EB Garamond'; 
-    src: url('../assets/EB_Garamond/EBGaramond-VariableFont_wght.ttf');
+    font-family: 'Josefin Sans'; 
+    src: url('../assets/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
 }
 
 // Fonts
 $headingFont: 'Quicksand', sans-serif; 
-$bodyFont: 'EB Garamond', serif; 
+$bodyFont: 'Josefin Sans', sans-serif;
 
 // Colours
 $background: #202020; 

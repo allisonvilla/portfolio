@@ -1,0 +1,41 @@
+header {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+
+    .wrapper {
+        transform: translateY(-10vh); 
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .arrow-container {
+        display: flex; 
+        flex-direction: column; 
+        position: relative; 
+
+        h2 {
+            margin-left: 2px;
+        }
+        
+        a {
+            border-bottom: none; 
+            font-size: 3rem; 
+            align-self: center;
+            position: fixed; 
+            left: 14%; 
+            top: 110%; 
+            font-weight: 500;
+    
+            &:hover,
+            &:focus {
+                border-bottom: none; 
+                box-shadow: none;
+                color: $accent; 
+            }
+        }
+    }
+
+}

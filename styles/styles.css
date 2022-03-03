@@ -313,6 +313,9 @@ a {
 }
 a:hover, a:focus {
   border-bottom: 2px solid #82C0CC;
+  -webkit-box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.6em -0.5em;
+          box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.6em -0.5em;
+  text-shadow: 2.5px 2.5px 6.5px #82C0CC;
 }
 
 .main-nav {
@@ -333,9 +336,9 @@ a:hover, a:focus {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   padding: 10px 70px 10px 50px;
-  border-bottom: 1px solid rgba(130, 192, 204, 0.3);
-  -webkit-box-shadow: rgba(130, 192, 204, 0.25) 0px 2px 5px -1px, rgba(130, 192, 204, 0.3) 0px 1px 3px -1px;
-          box-shadow: rgba(130, 192, 204, 0.25) 0px 2px 5px -1px, rgba(130, 192, 204, 0.3) 0px 1px 3px -1px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
 }
 .main-nav .logo {
   border: 1px solid rgba(244, 244, 249, 0.5);
@@ -367,8 +370,9 @@ a:hover, a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-.main-nav ul li a:hover {
-  -webkit-box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.6em -0.5em;
-          box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.6em -0.5em;
-  text-shadow: 2.5px 2.5px 6.5px #82C0CC;
+
+.scrolled {
+  border-bottom: 1px solid rgba(130, 192, 204, 0.3);
+  -webkit-box-shadow: rgba(130, 192, 204, 0.25) 0px 2px 5px -1px, rgba(130, 192, 204, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(130, 192, 204, 0.25) 0px 2px 5px -1px, rgba(130, 192, 204, 0.3) 0px 1px 3px -1px;
 }

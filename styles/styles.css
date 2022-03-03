@@ -332,10 +332,18 @@ a:hover, a:focus {
   background-color: #202020;
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
+  padding: 10px 70px 10px 50px;
+  border-bottom: 1px solid rgba(130, 192, 204, 0.3);
+  -webkit-box-shadow: rgba(130, 192, 204, 0.25) 0px 2px 5px -1px, rgba(130, 192, 204, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(130, 192, 204, 0.25) 0px 2px 5px -1px, rgba(130, 192, 204, 0.3) 0px 1px 3px -1px;
+}
+.main-nav .logo {
+  border: 1px solid rgba(244, 244, 249, 0.5);
+  padding: 12px 10px;
 }
 .main-nav .logo a {
   border-bottom: none;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 .main-nav .logo a:hover, .main-nav .logo a:focus {
   border-bottom: none;
@@ -349,4 +357,13 @@ a:hover, a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+.main-nav ul li {
+  margin-left: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

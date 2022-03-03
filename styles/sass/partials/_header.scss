@@ -5,14 +5,19 @@ header {
     justify-content: center;
 
     .wrapper {
-        transform: translateY(-5vh); 
+        transform: translateY(-3vh); 
         display: flex;
         flex-direction: column; 
-        align-items: flex-start; 
+        align-items: center;
     }
 
-    h2 {
-        margin-left: 2px;
+    .box-container {
+        border: 1px solid rgba($color: $body, $alpha: 0.5); 
+        padding: 60px 75px; 
+
+        h2 {
+            margin-left: 2px;
+        }
     }
 
     .arrow-container {

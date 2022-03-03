@@ -401,8 +401,8 @@ header {
           justify-content: center;
 }
 header .wrapper {
-  -webkit-transform: translateY(-5vh);
-          transform: translateY(-5vh);
+  -webkit-transform: translateY(-3vh);
+          transform: translateY(-3vh);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,11 +410,15 @@ header .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-header h2 {
+header .box-container {
+  border: 1px solid rgba(244, 244, 249, 0.5);
+  padding: 60px 75px;
+}
+header .box-container h2 {
   margin-left: 2px;
 }
 header .arrow-container {

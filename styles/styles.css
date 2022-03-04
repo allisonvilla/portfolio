@@ -503,6 +503,14 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   font-weight: 200;
 }
 
+.projects h2 {
+  margin-bottom: 15px;
+}
+.projects p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 .tools .filter-input {
   display: -webkit-box;
   display: -ms-flexbox;

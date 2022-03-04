@@ -90,35 +90,57 @@ portfolio.projects = [
             'sass',
             'git',
             'terminal',
+            'accessibility', 
             'responsive'
         ]
     }, 
 ];
 
-portfolio.checkboxEvent = () => {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    let checkedValues = []; 
+portfolio.checkboxes = document.querySelectorAll('input[type="checkbox"]'); 
 
-    checkboxes.forEach((checkbox) => {
+portfolio.checkboxEvent = () => {
+    portfolio.checkboxes.forEach((checkbox) => {
         checkbox.addEventListener('change', () => {
-            checkboxes.forEach((checkbox) => {
-                if (checkbox.checked) {
-                    checkedValues.push(checkbox.value);
-                }
-            }); 
+            portfolio.projectFilter(); 
         }); 
+    }); 
+}
+
+portfolio.getCheckedValues = () => {
+    let checkedValues = []; 
+    portfolio.checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            checkedValues.push(checkbox.value);
+        }
     }); 
     return checkedValues; 
 }
 
+portfolio.projectFilter = () => {
+    const projectDisplay = document.querySelector('.project-display')
+    projectDisplay.innerHTML = "";
+
+    let checkedValues = portfolio.getCheckedValues(); 
+
+    let arrayFilter = portfolio.projects.filter((project) => {
+        return project.tools.includes(...checkedValues); 
+    }); 
+    
+    let displayArray = arrayFilter.filter((project) => {
+        return project.tools.includes(...checkedValues);
+    }); 
+
+    console.log(displayArray);
+}
+
 // Apply CSS class to nav bar after specified amount of scrolling
 portfolio.navScroll = () => {
-    const navEl = document.querySelector('.main-nav');
+    const nav = document.querySelector('.main-nav');
     window.onscroll = () => {
         if (window.pageYOffset > 77) {
-            navEl.classList.add('scrolled');
+            nav.classList.add('scrolled');
         } else {
-            navEl.classList.remove('scrolled');
+            nav.classList.remove('scrolled');
         }
     }
 }

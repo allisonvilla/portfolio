@@ -22,7 +22,7 @@ portfolio.projects = [
             'responsive',
             'accessibility',
             'featured'
-        ],
+        ]
     },
     {
         name: 'Random Zoo Animal',
@@ -40,7 +40,7 @@ portfolio.projects = [
             'accessibility',
             'rest',
             'featured'
-        ],
+        ]
     },
     {
         name: 'Ghibli Movie Night',
@@ -58,7 +58,7 @@ portfolio.projects = [
             'responsive',
             'rest',
             'featured'
-        ],
+        ]
     },
     {
         name: 'Almost Blackjack',
@@ -120,17 +120,37 @@ portfolio.projectFilter = () => {
     const projectDisplay = document.querySelector('.project-display')
     projectDisplay.innerHTML = "";
 
+    // Run getCheckedValues() and store its return in a variable
     let checkedValues = portfolio.getCheckedValues(); 
 
-    let arrayFilter = portfolio.projects.filter((project) => {
-        return project.tools.includes(...checkedValues); 
-    }); 
-    
-    let displayArray = arrayFilter.filter((project) => {
-        return project.tools.includes(...checkedValues);
-    }); 
+    // Loop through the projects array
+    portfolio.projects.forEach((project) => {
+        let tools = project.tools;
 
-    console.log(displayArray);
+        // A function that will check if the tools property on a project object contains every value that was checked by the user
+        let matchChecker = (originalArray, checkedArray) => checkedArray.every((x) => originalArray.includes(x)); 
+
+        let isMatch = matchChecker(tools, checkedValues); 
+
+        // If the project matches the filter, render the project details on the DOM
+        if (isMatch) {
+            let projectDiv = `
+                <div class="project-container">
+                    <h3>${project.name}</h3>
+                    <div class="description">
+                        <div class="project-img">
+                            <img src="${project.img}" alt="A screenshot of ${project.name}">
+                        </div>
+                        <div class="project-text">
+                            <p>${project.desc}</p>
+                            <p class="links"><a class="live-link" href="${project.liveurl}" target="_blank" rel="noopener noreferrer">Live Link</a> | <a class="github-link" href="${project.giturl}" target="_blank" rel="noopener noreferrer">Github Repo</a></p>
+                        </div>
+                    </div>
+                </div>`;
+
+            projectDisplay.innerHTML += projectDiv; 
+        }
+    }); 
 }
 
 // Apply CSS class to nav bar after specified amount of scrolling

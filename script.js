@@ -117,20 +117,22 @@ portfolio.getCheckedValues = () => {
 }
 
 portfolio.projectFilter = () => {
-    const projectDisplay = document.querySelector('.project-display')
-    projectDisplay.innerHTML = "";
+    const projectDisplay = document.querySelector('.project-display');
+    projectDisplay.innerHTML = '';
 
     // Run getCheckedValues() and store its return in a variable
-    let checkedValues = portfolio.getCheckedValues(); 
+    let checkedValues = portfolio.getCheckedValues();
+    console.log(checkedValues);
 
     // Loop through the projects array
     portfolio.projects.forEach((project) => {
         let tools = project.tools;
 
-        // A function that will check if the tools property on a project object contains every value that was checked by the user
-        let matchChecker = (originalArray, checkedArray) => checkedArray.every((x) => originalArray.includes(x)); 
+        // A function that will check if the tools property on a project object contains every value that was selected by the user
+        let matchChecker = (originalArray, checkedArray) =>
+            checkedArray.every((x) => originalArray.includes(x));
 
-        let isMatch = matchChecker(tools, checkedValues); 
+        let isMatch = matchChecker(tools, checkedValues);
 
         // If the project matches the filter, render the project details on the DOM
         if (isMatch) {
@@ -147,11 +149,17 @@ portfolio.projectFilter = () => {
                         </div>
                     </div>
                 </div>`;
+            projectDisplay.innerHTML += projectDiv;
+        } 
+    });
 
-            projectDisplay.innerHTML += projectDiv; 
-        }
-    }); 
+    // Hide display if nothing is checked
+    if (checkedValues.length == 0) {
+        projectDisplay.innerHTML = ``;
+    }
 }
+
+
 
 // Apply CSS class to nav bar after specified amount of scrolling
 portfolio.navScroll = () => {

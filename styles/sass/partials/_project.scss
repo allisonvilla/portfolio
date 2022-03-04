@@ -1,19 +1,25 @@
 .tools {
-    ul {
+    .filter-input {
         display: flex; 
         flex-wrap: wrap;
 
-        li {
+        label {
             display: flex; 
             flex-direction: column; 
             text-align: center; 
             width: 15%; 
             margin-bottom: 15px; 
+            cursor: pointer; 
+            transition: 0.15s; 
 
             i {
                 font-size: 2.5rem; 
                 margin-bottom: 10px; 
             }
+        }
+
+        input[type=checkbox]:checked + label {
+            color: $accent; 
         }
     }
 }

@@ -503,14 +503,14 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   font-weight: 200;
 }
 
-.tools ul {
+.tools .filter-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.tools ul li {
+.tools .filter-input label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,10 +521,16 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   text-align: center;
   width: 15%;
   margin-bottom: 15px;
+  cursor: pointer;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
 }
-.tools ul li i {
+.tools .filter-input label i {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+.tools .filter-input input[type=checkbox]:checked + label {
+  color: #82C0CC;
 }
 
 .project-container h3 {

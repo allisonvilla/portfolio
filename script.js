@@ -153,7 +153,7 @@ portfolio.projectFilter = () => {
             let projectDiv = `
                 <div class="project-container">
                     <div class="project-img">
-                        <img src="${project.img}" alt="A screenshot of ${project.name}">
+                        <img src="${project.img}" alt="A screenshot of my project, ${project.name}">
                     </div>
                     <div class="project-text">
                         <h3>${project.name}</h3>
@@ -166,7 +166,7 @@ portfolio.projectFilter = () => {
         }
     });
 
-    // Hide display if nothing is checked
+    // Clear display if nothing is checked
     if (checkedValues.length == 0) {
         projectDisplay.innerHTML = ``;
     }

@@ -763,7 +763,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   outline: none;
   border-bottom: 3px solid #82C0CC;
 }
-.contact .form-container form .g-recaptcha div:first-child {
+.contact .form-container form textarea + div {
   margin: auto;
 }
 .contact .form-container form button {

@@ -48,6 +48,7 @@
             display: flex;
             flex-wrap: wrap; 
             width: 50%; 
+            align-items: center;
     
             #name {
                 margin-right: 10px; 
@@ -101,6 +102,10 @@
                     outline: none;
                     border-bottom: 3px solid $accent; 
                 }
+            }
+
+            .g-recaptcha div:first-child {
+                margin: auto;
             }
     
             button {

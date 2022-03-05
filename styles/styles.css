@@ -678,6 +678,9 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .contact .form-container form #name {
   margin-right: 10px;
@@ -759,6 +762,9 @@ header .arrow-container a:hover, header .arrow-container a:focus {
 .contact .form-container form textarea:focus {
   outline: none;
   border-bottom: 3px solid #82C0CC;
+}
+.contact .form-container form .g-recaptcha div:first-child {
+  margin: auto;
 }
 .contact .form-container form button {
   font-family: "Josefin Sans", sans-serif;

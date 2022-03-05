@@ -510,6 +510,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   margin-top: 10px;
   margin-bottom: 60px;
   font-size: 1.2rem;
+  line-height: 1.3;
 }
 .projects .coming-soon {
   text-align: center;
@@ -563,7 +564,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 55px;
+  margin-top: 35px;
 }
 .project-container h3 {
   font-size: 1.5rem;
@@ -598,4 +599,8 @@ header .arrow-container a:hover, header .arrow-container a:focus {
 .project-container:nth-of-type(2n) .project-img {
   margin-right: 0;
   margin-left: 50px;
+}
+
+footer {
+  text-align: center;
 }

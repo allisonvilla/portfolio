@@ -132,7 +132,6 @@ portfolio.projectFilter = () => {
 
     // Run getCheckedValues() and store its return in a variable
     let checkedValues = portfolio.getCheckedValues();
-    console.log(checkedValues);
 
     // A function that will check if the tools property on a project object contains every value that was selected by the user
     let matchChecker = (originalArray, checkedArray) => checkedArray.every((x) => originalArray.includes(x));

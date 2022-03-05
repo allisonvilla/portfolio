@@ -27,7 +27,7 @@ section > .wrapper {
 }
 
 a {
-    font-weight: light; 
+    font-weight: 400; 
     text-decoration: none;
     color: $body;
     padding-bottom: 2px; 
@@ -44,4 +44,10 @@ a {
 
 img {
     max-width: 100%; 
+}
+
+.temp {
+    .wrapper {
+        text-align: center; 
+    }
 }

@@ -342,6 +342,10 @@ img {
   max-width: 100%;
 }
 
+.temp .wrapper {
+  text-align: center;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,8 +509,10 @@ header .arrow-container a:hover, header .arrow-container a:focus {
 }
 .about-content p {
   margin: 0;
+  margin-bottom: 20px;
   line-height: 1.5rem;
   font-weight: 200;
+  font-size: 1rem;
 }
 
 .projects h2 {

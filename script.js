@@ -62,7 +62,7 @@ portfolio.projects = [
     },
     {
         name: 'Almost Blackjack',
-        desc: `A simple blackjack-like game with a betting system. Built with vanilla JavaScript.`,
+        desc: `My first full JS app! Almost Blackjack is a simple blackjack-like game with a betting system, built with vanilla JavaScript.`,
         liveurl: 'https://allisonvilla.github.io/blackjack-game/',
         giturl: 'https://github.com/allisonvilla/blackjack-game',
         img: './assets/blackjack-app-preview.png',
@@ -96,6 +96,12 @@ portfolio.projects = [
     },
 ];
 
+// Array of technologies I know but haven't created a project for yet
+portfolio.noProject = [
+    'react',
+    'firebase'
+]
+
 portfolio.checkboxes = document.querySelectorAll('input[type="checkbox"]'); 
 
 portfolio.checkboxEvent = () => {
@@ -128,14 +134,14 @@ portfolio.projectFilter = () => {
     let checkedValues = portfolio.getCheckedValues();
     console.log(checkedValues);
 
+    // A function that will check if the tools property on a project object contains every value that was selected by the user
+    let matchChecker = (originalArray, checkedArray) => checkedArray.every((x) => originalArray.includes(x));
+
     // Loop through the projects array
     portfolio.projects.forEach((project) => {
         let tools = project.tools;
 
-        // A function that will check if the tools property on a project object contains every value that was selected by the user
-        let matchChecker = (originalArray, checkedArray) =>
-            checkedArray.every((x) => originalArray.includes(x));
-
+        // Check if each project matches the filter, using matchChecker()
         let isMatch = matchChecker(tools, checkedValues);
 
         // If the project matches the filter, render the project details on the DOM
@@ -152,8 +158,15 @@ portfolio.projectFilter = () => {
                     </div>
                 </div>`;
             projectDisplay.innerHTML += projectDiv;
-        }
+        } 
     });
+
+    // For filter options that don't have a project yet, render a different message
+    portfolio.noProject.forEach((tool) => {
+        if (checkedValues.includes(tool)) {
+            projectDisplay.innerHTML = `<p class="coming-soon">Nothing here...yet. <br> I'm always working on something new, so check back soon! 👩‍💻 <br> In the meantime, why don't you try another filter?</p>`;
+        }
+    }); 
 
     // Hide display if nothing is checked
     if (checkedValues.length == 0) {

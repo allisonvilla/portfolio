@@ -5,7 +5,8 @@
 
     p {
         margin-top: 10px;
-        margin-bottom: 30px; 
+        margin-bottom: 60px; 
+        font-size: 1.2rem; 
     }
 }
 
@@ -13,6 +14,7 @@
     .filter-input {
         display: flex; 
         flex-wrap: wrap;
+        justify-content: center;
 
         label {
             display: flex; 
@@ -27,6 +29,10 @@
                 font-size: 2.5rem; 
                 margin-bottom: 10px; 
             }
+
+            &[for="featured"] {
+                text-shadow: 0 -1px 20px $accent;
+            }
         }
 
         input[type=checkbox]:checked + label {
@@ -36,29 +42,45 @@
 }
 
 .project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 55px; 
+
     h3 {
         font-size: 1.5rem; 
     }
-    .description {
-        display: flex; 
+
+    p {
+        margin-bottom: 30px; 
+        font-size: 1rem; 
+    }
+
+    .project-img {
+        width: 40%; 
+        margin-right: 50px; 
+
+        img {
+            width: 100%;
+            object-fit: cover; 
+            box-shadow: 0 0 0.75em 0 rgba($color: $body, $alpha: 0.5);
+        }
+    }
+
+    .project-text {
+        width: calc(60% - 50px);
+
+        a {
+            border-bottom: 2px solid $accent; 
+        }
+    }
+
+    &:nth-of-type(2n) {
+        flex-direction: row-reverse; 
 
         .project-img {
-            width: 40%; 
-            margin-right: 50px; 
-
-            img {
-                width: 100%;
-                object-fit: cover; 
-                box-shadow: 0 0 0.75em 0 rgba($color: $body, $alpha: 0.5);
-            }
-        }
-
-        .project-text {
-            width: calc(60% - 50px);
-
-            a {
-                border-bottom: 2px solid $accent; 
-            }
+            margin-right: 0;
+            margin-left: 50px; 
         }
     }
 }

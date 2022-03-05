@@ -8,6 +8,24 @@ portfolio.init = () => {
 // Project data array
 portfolio.projects = [
     {
+        name: 'Ghibli Movie Night',
+        desc: `A paired programming project, inspired by our love for Studio Ghibli. Ghibli Movie Night is a quiz game where the user must select the correct movie title based on a randomly presented movie description. Built with vanilla JavaScript and a Studio Ghibli REST API.`,
+        liveurl: 'https://musing-leakey-6cb38d.netlify.app/',
+        giturl: 'https://github.com/allisonvilla/ghibli-movie-night',
+        img: './assets/ghibli-app-preview.png',
+        tools: [
+            'js',
+            'html',
+            'css',
+            'sass',
+            'git',
+            'terminal',
+            'responsive',
+            'rest',
+            'featured',
+        ],
+    },
+    {
         name: 'Self-Care Timer',
         desc: 'A productivity timer that returns a random self-care suggestion at the end of your work period. Built with vanilla JavaScript.',
         liveurl: 'https://allisonvilla.github.io/self-care-timer/',
@@ -21,8 +39,8 @@ portfolio.projects = [
             'terminal',
             'responsive',
             'accessibility',
-            'featured'
-        ]
+            'featured',
+        ],
     },
     {
         name: 'Random Zoo Animal',
@@ -39,26 +57,8 @@ portfolio.projects = [
             'responsive',
             'accessibility',
             'rest',
-            'featured'
-        ]
-    },
-    {
-        name: 'Ghibli Movie Night',
-        desc: `A paired programming project, inspired by our love for Studio Ghibli. Ghibli Movie Night is a quiz game where the user must select the correct movie title based on a randomly presented movie description. Built with vanilla JavaScript and a Studio Ghibli REST API.`,
-        liveurl: 'https://musing-leakey-6cb38d.netlify.app/',
-        giturl: 'https://github.com/allisonvilla/ghibli-movie-night',
-        img: './assets/ghibli-app-preview.png',
-        tools: [
-            'js',
-            'html',
-            'css',
-            'sass',
-            'git',
-            'terminal',
-            'responsive',
-            'rest',
-            'featured'
-        ]
+            'featured',
+        ],
     },
     {
         name: 'Almost Blackjack',
@@ -74,15 +74,15 @@ portfolio.projects = [
             'terminal',
             'responsive',
             'accessibility',
-            'featured'
-        ]
+            'featured',
+        ],
     },
     {
-        name: `Harper's Blog`, 
+        name: `Harper's Blog`,
         desc: `A fully responsive multi-page design conversion built with SCSS and a touch of vanilla JavaScript for small interactive features.`,
-        liveurl: 'https://zealous-payne-b74657.netlify.app/index.html', 
+        liveurl: 'https://zealous-payne-b74657.netlify.app/index.html',
         giturl: 'https://github.com/allisonvilla/juno-project-one',
-        img: './assets/harper-blog-preview.png', 
+        img: './assets/harper-blog-preview.png',
         tools: [
             'js',
             'html',
@@ -90,22 +90,26 @@ portfolio.projects = [
             'sass',
             'git',
             'terminal',
-            'accessibility', 
-            'responsive'
-        ]
-    }, 
+            'accessibility',
+            'responsive',
+        ],
+    },
 ];
 
 portfolio.checkboxes = document.querySelectorAll('input[type="checkbox"]'); 
 
 portfolio.checkboxEvent = () => {
     portfolio.checkboxes.forEach((checkbox) => {
+        // Ensure that checkboxes are unchecked on page load
+        checkbox.checked = false; 
+        // When user input is detected, run projectFilter()
         checkbox.addEventListener('change', () => {
             portfolio.projectFilter(); 
         }); 
     }); 
 }
 
+// A function that returns the value of the user's selected checkboxes
 portfolio.getCheckedValues = () => {
     let checkedValues = []; 
     portfolio.checkboxes.forEach((checkbox) => {
@@ -138,19 +142,17 @@ portfolio.projectFilter = () => {
         if (isMatch) {
             let projectDiv = `
                 <div class="project-container">
-                    <h3>${project.name}</h3>
-                    <div class="description">
-                        <div class="project-img">
-                            <img src="${project.img}" alt="A screenshot of ${project.name}">
-                        </div>
-                        <div class="project-text">
-                            <p>${project.desc}</p>
-                            <p class="links"><a class="live-link" href="${project.liveurl}" target="_blank" rel="noopener noreferrer">Live Link</a> | <a class="github-link" href="${project.giturl}" target="_blank" rel="noopener noreferrer">Github Repo</a></p>
-                        </div>
+                    <div class="project-img">
+                        <img src="${project.img}" alt="A screenshot of ${project.name}">
+                    </div>
+                    <div class="project-text">
+                        <h3>${project.name}</h3>
+                        <p>${project.desc}</p>
+                        <p class="links"><a class="live-link" href="${project.liveurl}" target="_blank" rel="noopener noreferrer">Live Link</a> | <a class="github-link" href="${project.giturl}" target="_blank" rel="noopener noreferrer">Github Repo</a></p>
                     </div>
                 </div>`;
             projectDisplay.innerHTML += projectDiv;
-        } 
+        }
     });
 
     // Hide display if nothing is checked
@@ -158,8 +160,6 @@ portfolio.projectFilter = () => {
         projectDisplay.innerHTML = ``;
     }
 }
-
-
 
 // Apply CSS class to nav bar after specified amount of scrolling
 portfolio.navScroll = () => {

@@ -508,7 +508,8 @@ header .arrow-container a:hover, header .arrow-container a:focus {
 }
 .projects p {
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
 }
 
 .tools .filter-input {
@@ -517,6 +518,9 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tools .filter-input label {
   display: -webkit-box;
@@ -537,32 +541,56 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
+.tools .filter-input label[for=featured] {
+  text-shadow: 0 -1px 20px #82C0CC;
+}
 .tools .filter-input input[type=checkbox]:checked + label {
   color: #82C0CC;
 }
 
-.project-container h3 {
-  font-size: 1.5rem;
-}
-.project-container .description {
+.project-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 55px;
 }
-.project-container .description .project-img {
+.project-container h3 {
+  font-size: 1.5rem;
+}
+.project-container p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+.project-container .project-img {
   width: 40%;
   margin-right: 50px;
 }
-.project-container .description .project-img img {
+.project-container .project-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: 0 0 0.75em 0 rgba(244, 244, 249, 0.5);
           box-shadow: 0 0 0.75em 0 rgba(244, 244, 249, 0.5);
 }
-.project-container .description .project-text {
+.project-container .project-text {
   width: calc(60% - 50px);
 }
-.project-container .description .project-text a {
+.project-container .project-text a {
   border-bottom: 2px solid #82C0CC;
+}
+.project-container:nth-of-type(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.project-container:nth-of-type(2n) .project-img {
+  margin-right: 0;
+  margin-left: 50px;
 }

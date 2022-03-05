@@ -48,7 +48,7 @@
             display: flex;
             flex-wrap: wrap; 
             width: 50%; 
-            align-items: center;
+            justify-content: center;
     
             #name {
                 margin-right: 10px; 
@@ -103,10 +103,6 @@
                     border-bottom: 3px solid $accent; 
                 }
             }
-
-            textarea + div {
-                margin: auto;
-            }
     
             button {
                 font-family: $bodyFont; 
@@ -126,6 +122,10 @@
                     text-shadow: 1px -2.5px 6.5px $accent;
                     cursor: pointer; 
                 }
+            }
+
+            button + div {
+                margin: 10px auto 20px; 
             }
         }
     }

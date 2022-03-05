@@ -678,9 +678,9 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact .form-container form #name {
   margin-right: 10px;
@@ -763,9 +763,6 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   outline: none;
   border-bottom: 3px solid #82C0CC;
 }
-.contact .form-container form textarea + div {
-  margin: auto;
-}
 .contact .form-container form button {
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
@@ -784,6 +781,9 @@ header .arrow-container a:hover, header .arrow-container a:focus {
           box-shadow: rgba(130, 192, 204, 0.8) 0 0.4em 0.6em -0.5em;
   text-shadow: 1px -2.5px 6.5px #82C0CC;
   cursor: pointer;
+}
+.contact .form-container form button + div {
+  margin: 10px auto 20px;
 }
 
 footer {

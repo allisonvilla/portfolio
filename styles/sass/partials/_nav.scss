@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: sticky;
+    width: 100%; 
     top: 0; 
     z-index: 10; 
     background-color: $background;
@@ -59,4 +60,5 @@
 .scrolled {
     border-bottom: 1px solid rgba($color: $accent, $alpha: 0.3); 
     box-shadow: rgba($color: $accent, $alpha: 0.25) 0px 2px 5px -1px, rgba($color: $accent, $alpha: 0.3) 0px 1px 3px -1px;
+    background-color: rgba($color: $background, $alpha: 0.87);
 }

@@ -181,15 +181,27 @@ portfolio.projectFilter = () => {
     }
 };
 
-// Apply CSS class to nav bar after specified amount of scrolling
 portfolio.navScroll = () => {
     const nav = document.querySelector('.main-nav');
+    let prevScrollVal = 0;
+    
     window.onscroll = () => {
+        // Apply CSS class to nav bar after specified amount of scrolling
         if (window.pageYOffset > 77) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
+
+        // Hide nav bar while scrolling down, show when scrolling up
+        let currentScrollVal = window.pageYOffset;
+        if (currentScrollVal > prevScrollVal) {
+            nav.style.top = '-80px';
+        } else {
+            nav.style.top = '0';
+        }
+
+        prevScrollVal = currentScrollVal;
     };
 };
 

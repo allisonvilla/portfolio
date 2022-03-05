@@ -783,7 +783,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   cursor: pointer;
 }
 .contact .form-container form button + div {
-  margin: 10px auto 20px;
+  margin: 20px auto 0px;
 }
 
 footer {

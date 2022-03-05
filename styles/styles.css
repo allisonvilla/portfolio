@@ -782,8 +782,18 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   text-shadow: 1px -2.5px 6.5px #82C0CC;
   cursor: pointer;
 }
-.contact .form-container form button + div {
-  margin: 20px auto 0px;
+.contact .form-container form .honeypot {
+  display: none;
+}
+
+.form-success h2 {
+  margin-bottom: 20px;
+}
+.form-success p {
+  margin-top: 10px;
+}
+.form-success .wrapper {
+  margin-top: 50px;
 }
 
 footer {

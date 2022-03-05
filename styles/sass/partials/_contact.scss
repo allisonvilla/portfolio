@@ -123,10 +123,25 @@
                     cursor: pointer; 
                 }
             }
-
-            button + div {
-                margin: 20px auto 0px; 
+            
+            .honeypot {
+                display: none; 
             }
         }
+    }
+}
+
+// Form success page
+.form-success {
+    h2 {
+        margin-bottom: 20px; 
+    }
+
+    p {
+        margin-top: 10px; 
+    }
+
+    .wrapper {
+        margin-top: 50px; 
     }
 }

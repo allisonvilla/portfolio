@@ -3,7 +3,6 @@ const portfolio = {};
 portfolio.init = () => {
     portfolio.navScroll();
     portfolio.checkboxEvent();
-    portfolio.formEvent();
 };
 
 // Project data array
@@ -193,14 +192,5 @@ portfolio.navScroll = () => {
         }
     };
 };
-
-// Form event
-portfolio.formEvent = () => {
-    const form = document.querySelector('form')
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); 
-        form.reset();
-    })
-}
 
 portfolio.init();

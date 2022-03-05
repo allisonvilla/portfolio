@@ -230,14 +230,6 @@ template {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: "Quicksand";
-  src: url("../assets/Quicksand/Quicksand-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../assets/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
-}
 html {
   font-size: 125%;
 }
@@ -245,7 +237,7 @@ html {
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: thin;
   letter-spacing: 0.04rem;
 }
 
@@ -323,7 +315,7 @@ section > .wrapper {
 }
 
 a {
-  font-weight: 400;
+  font-weight: light;
   text-decoration: none;
   color: #f4f4f9;
   padding-bottom: 2px;
@@ -340,10 +332,6 @@ a:hover, a:focus {
 
 img {
   max-width: 100%;
-}
-
-.temp .wrapper {
-  text-align: center;
 }
 
 .main-nav {
@@ -704,7 +692,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   border: none;
   border: 1px solid rgba(244, 244, 249, 0.5);
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 200;
+  font-weight: thin;
   font-size: 1rem;
   padding: 30px 40px 20px 40px;
   background-color: #202020;
@@ -744,7 +732,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   border: none;
   border: 1px solid rgba(244, 244, 249, 0.5);
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 200;
+  font-weight: thin;
   font-size: 1rem;
   padding: 45px 40px;
   resize: none;

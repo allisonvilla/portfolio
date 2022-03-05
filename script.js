@@ -1,9 +1,9 @@
-const portfolio = {}
+const portfolio = {};
 
 portfolio.init = () => {
     portfolio.navScroll();
-    portfolio.checkboxEvent(); 
-}
+    portfolio.checkboxEvent();
+};
 
 // Project data array
 portfolio.projects = [
@@ -96,43 +96,49 @@ portfolio.projects = [
     },
 ];
 
-portfolio.checkboxes = document.querySelectorAll('input[type="checkbox"]'); 
+portfolio.checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 portfolio.checkboxEvent = () => {
     portfolio.checkboxes.forEach((checkbox) => {
         // Ensure that checkboxes are unchecked on page load
-        checkbox.checked = false; 
+        checkbox.checked = false;
         // When user input is detected, run projectFilter()
         checkbox.addEventListener('change', () => {
-            portfolio.projectFilter(); 
-        }); 
-    }); 
-}
+            portfolio.projectFilter();
+        });
+    });
+};
 
 // A function that returns the value of the user's selected checkboxes
 portfolio.getCheckedValues = () => {
-    let checkedValues = []; 
+    let checkedValues = [];
     portfolio.checkboxes.forEach((checkbox) => {
         if (checkbox.checked) {
             checkedValues.push(checkbox.value);
         }
-    }); 
-    return checkedValues; 
-}
+    });
+    return checkedValues;
+};
+
+// An array to hold the objects that are to be rendered to the DOM
+portfolio.displayArray = [];
 
 portfolio.projectFilter = () => {
     const projectDisplay = document.querySelector('.project-display');
-    const comingSoon = document.querySelector('.coming-soon'); 
+    const comingSoon = document.querySelector('.coming-soon');
+    // Clear project display
     projectDisplay.innerHTML = '';
-
-    // An array to hold the objects that are to be rendered to the DOM
-    let displayArray = [];
+    // Hide 'coming soon' message
+    comingSoon.style.display = 'none';
+    // Clear display array
+    portfolio.displayArray.splice(0);
 
     // Run getCheckedValues() and store its return in a variable
     let checkedValues = portfolio.getCheckedValues();
 
     // A function that will check if the tools property on a project object contains every value that was selected by the user - returns a boolean value
-    let matchChecker = (originalArray, checkedArray) => checkedArray.every((x) => originalArray.includes(x));
+    let matchChecker = (originalArray, checkedArray) =>
+        checkedArray.every((x) => originalArray.includes(x));
 
     // Loop through the projects array
     portfolio.projects.forEach((project) => {
@@ -142,14 +148,17 @@ portfolio.projectFilter = () => {
         let isMatch = matchChecker(tools, checkedValues);
 
         // If the project matches the filter, push to the display array
-        if (isMatch) {
-            displayArray.push(project); 
-        } 
+        if (isMatch && checkedValues.length != 0) {
+            portfolio.displayArray.push(project);
+        }
+    });
 
-        // If the display array is empty, show a different message - otherwise, render the projects on the DOM
-        if (displayArray.length == 0) {
-            comingSoon.style.display = 'block'; 
-        } else {
+    // If the display array is empty, show a different message - otherwise, render the projects on the DOM
+    if (portfolio.displayArray.length == 0 && checkedValues.length !=0) {
+        comingSoon.style.display = 'block';
+    } else {
+        // Display projects in display array
+        portfolio.displayArray.forEach((project) => {
             let projectDiv = `
                 <div class="project-container">
                     <div class="project-img">
@@ -162,15 +171,15 @@ portfolio.projectFilter = () => {
                     </div>
                 </div>`;
             projectDisplay.innerHTML += projectDiv;
-            comingSoon.style.display = 'none'; 
-        }
-    });
+            comingSoon.style.display = 'none';
+        });
+    }
 
     // Clear display if nothing is checked
     if (checkedValues.length == 0) {
         projectDisplay.innerHTML = ``;
     }
-}
+};
 
 // Apply CSS class to nav bar after specified amount of scrolling
 portfolio.navScroll = () => {
@@ -181,7 +190,7 @@ portfolio.navScroll = () => {
         } else {
             nav.classList.remove('scrolled');
         }
-    }
-}
+    };
+};
 
 portfolio.init();

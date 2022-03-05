@@ -115,14 +115,28 @@
         <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="wrapper">
-                <h2>Let's get in touch!</h2>
-                <!-- Add my email -->
+                <h2>Shoot me a message!</h2>
+                <p>I would love to hear from you! You can send me a message below or reach me at <strong><a href="mailto:allison.villa@outlook.com" class="email">allison.villa@outlook.com</a></strong>.</p>
                 <ul>
                     <li><a href="https://github.com/allisonvilla" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>Github</a></li>
                     <li><a href="https://www.linkedin.com/in/allisonvilla/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
                     <li><a href="https://calendly.com/allison-villa" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar-alt"></i>Calendly</a></li>
                 </ul>
                 <!-- Contact form -->
+                <div class="form-container">
+                    <form action="https://formspree.io/f/xayvjdke" method="POST">
+                        <!-- Name Input -->
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                        <!-- Email Input -->
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                        <!-- Message Input -->
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="8" placeholder="What's up?" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
             </div> <!-- END .wrapper -->
         </section> <!-- END .contact -->
     </main>

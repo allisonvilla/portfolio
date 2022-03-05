@@ -96,12 +96,6 @@ portfolio.projects = [
     },
 ];
 
-// Array of technologies I know but haven't created a project for yet
-portfolio.noProject = [
-    'react',
-    'firebase'
-]
-
 portfolio.checkboxes = document.querySelectorAll('input[type="checkbox"]'); 
 
 portfolio.checkboxEvent = () => {
@@ -128,12 +122,16 @@ portfolio.getCheckedValues = () => {
 
 portfolio.projectFilter = () => {
     const projectDisplay = document.querySelector('.project-display');
+    const comingSoon = document.querySelector('.coming-soon'); 
     projectDisplay.innerHTML = '';
+
+    // An array to hold the objects that are to be rendered to the DOM
+    let displayArray = [];
 
     // Run getCheckedValues() and store its return in a variable
     let checkedValues = portfolio.getCheckedValues();
 
-    // A function that will check if the tools property on a project object contains every value that was selected by the user
+    // A function that will check if the tools property on a project object contains every value that was selected by the user - returns a boolean value
     let matchChecker = (originalArray, checkedArray) => checkedArray.every((x) => originalArray.includes(x));
 
     // Loop through the projects array
@@ -143,8 +141,15 @@ portfolio.projectFilter = () => {
         // Check if each project matches the filter, using matchChecker()
         let isMatch = matchChecker(tools, checkedValues);
 
-        // If the project matches the filter, render the project details on the DOM
+        // If the project matches the filter, push to the display array
         if (isMatch) {
+            displayArray.push(project); 
+        } 
+
+        // If the display array is empty, show a different message - otherwise, render the projects on the DOM
+        if (displayArray.length == 0) {
+            comingSoon.style.display = 'block'; 
+        } else {
             let projectDiv = `
                 <div class="project-container">
                     <div class="project-img">
@@ -157,15 +162,9 @@ portfolio.projectFilter = () => {
                     </div>
                 </div>`;
             projectDisplay.innerHTML += projectDiv;
-        } 
-    });
-
-    // For filter options that don't have a project yet, render a different message
-    portfolio.noProject.forEach((tool) => {
-        if (checkedValues.includes(tool)) {
-            projectDisplay.innerHTML = `<p class="coming-soon">Nothing here...yet. <br> I'm always working on something new, so check back soon! 👩‍💻 <br> In the meantime, why don't you try another filter?</p>`;
+            comingSoon.style.display = 'none'; 
         }
-    }); 
+    });
 
     // Hide display if nothing is checked
     if (checkedValues.length == 0) {

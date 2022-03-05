@@ -13,7 +13,11 @@
     .coming-soon {
         text-align: center; 
         margin-top: 55px; 
-        margin-bottom: 15px; 
+        display: none; 
+
+        p {
+            margin-bottom: 15px; 
+        }
     }
 }
 

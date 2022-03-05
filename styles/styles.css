@@ -515,6 +515,9 @@ header .arrow-container a:hover, header .arrow-container a:focus {
 .projects .coming-soon {
   text-align: center;
   margin-top: 55px;
+  display: none;
+}
+.projects .coming-soon p {
   margin-bottom: 15px;
 }
 

@@ -10,7 +10,7 @@ portfolio.projects = [
     {
         name: 'Ghibli Movie Night',
         desc: `A paired programming project, inspired by our love for Studio Ghibli. Ghibli Movie Night is a quiz game where the user must select the correct movie title based on a randomly presented movie description. Built with vanilla JavaScript and a Studio Ghibli REST API.`,
-        liveurl: 'https://musing-leakey-6cb38d.netlify.app/',
+        liveurl: 'https://ghibli-movie-night.netlify.app/',
         giturl: 'https://github.com/allisonvilla/ghibli-movie-night',
         img: './assets/ghibli-app-preview.png',
         tools: [
@@ -80,7 +80,7 @@ portfolio.projects = [
     {
         name: `Harper's Blog`,
         desc: `A fully responsive multi-page design conversion built with SCSS and a touch of vanilla JavaScript for small interactive features.`,
-        liveurl: 'https://zealous-payne-b74657.netlify.app/index.html',
+        liveurl: 'https://harpers-blog.netlify.app/',
         giturl: 'https://github.com/allisonvilla/juno-project-one',
         img: './assets/harper-blog-preview.png',
         tools: [

@@ -16,10 +16,14 @@ body {
     justify-content: space-between;
 }
 
+section {
+    padding-top: 60px; 
+}
+
 section > .wrapper {
     border: 1px solid rgba($color: $body, $alpha: 0.5); 
     padding: 60px 75px; 
-    margin-bottom: 20vh;
+    margin-bottom: 10vh; 
 }
 
 a {
@@ -33,7 +37,7 @@ a {
     &:hover,
     &:focus {
         border-bottom: 2px solid $accent;
-        box-shadow: rgba($color: $accent, $alpha: 0.8) 0 0.5em 0.6em -0.5em;
+        box-shadow: rgba($color: $accent, $alpha: 0.8) 0 0.5em 0.5em -0.5em;
         text-shadow: 1px -2.5px 6.5px $accent;
     }
 }

@@ -66,8 +66,8 @@
 .mobile-nav-toggle {
     display: none;
     position: fixed; 
-    right: 30px; 
-    top: 20px; 
+    right: 15px; 
+    top: 5px; 
     z-index: 20; 
 
     .toggle {
@@ -116,10 +116,22 @@
             margin-left: 0; 
             margin-bottom: 20px; 
 
+            a {
+                &:hover,
+                &:focus {
+                    box-shadow: none; 
+                }
+            }
+
             .resume {
                 color: $accent; 
                 display: flex; 
-                width: 45%; 
+                border-bottom: none; 
+
+                &:hover,
+                &:focus {
+                    border-bottom: none; 
+                }
             }
 
             .icon-container {

@@ -262,6 +262,10 @@ h2 {
   margin-top: 10px;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
 ul, li, a, input {
   padding: 0;
   margin: 0;
@@ -424,8 +428,8 @@ img {
 .mobile-nav-toggle {
   display: none;
   position: fixed;
-  right: 30px;
-  top: 20px;
+  right: 15px;
+  top: 5px;
   z-index: 20;
 }
 .mobile-nav-toggle .toggle {
@@ -485,12 +489,19 @@ img {
   margin-left: 0;
   margin-bottom: 20px;
 }
+.mobile-nav ul li a:hover, .mobile-nav ul li a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 .mobile-nav ul li .resume {
   color: #82C0CC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 45%;
+  border-bottom: none;
+}
+.mobile-nav ul li .resume:hover, .mobile-nav ul li .resume:focus {
+  border-bottom: none;
 }
 .mobile-nav ul li .icon-container {
   font-size: 1.5rem;
@@ -968,10 +979,86 @@ footer {
   }
 
   header .wrapper {
-    margin-top: 140px;
-    margin-bottom: 15vh;
+    margin-top: 60px;
+    margin-bottom: 10vh;
   }
   header .wrapper .arrow-container {
     display: none;
+  }
+
+  section > .wrapper {
+    margin-bottom: 5vh;
+  }
+}
+@media (max-width: 675px) {
+  .mobile-nav ul li a {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-content .img-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+  .about-content .img-container img {
+    width: 80%;
+  }
+  .about-content .text-container {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .tools .filter-input label {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 580px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .mobile-nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .tools .filter-input label {
+    width: 33%;
+    margin-bottom: 30px;
+  }
+
+  .contact .form-container form #name,
+.contact .form-container form #email {
+    padding: 20px 30px 15px 30px;
+  }
+  .contact .form-container form #name:focus,
+.contact .form-container form #email:focus {
+    padding-bottom: 14px;
+  }
+  .contact .form-container form textarea {
+    padding: 40px 30px;
   }
 }

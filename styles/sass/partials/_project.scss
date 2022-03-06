@@ -12,10 +12,35 @@
     .coming-soon {
         text-align: center; 
         margin-top: 55px; 
+        margin-bottom: 40px; 
         display: none; 
 
         p {
             margin-bottom: 15px; 
+        }
+    }
+
+    .clear-btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; 
+
+        button {
+            border: none;
+            background-color: rgba($color: $background, $alpha: 0);
+            font-weight: 300;
+            font-size: 1.2rem;
+            font-family: $bodyFont;
+            color: $body; 
+            padding-bottom: 2px; 
+            transition: 0.3s; 
+            cursor: pointer; 
+    
+            &:hover,
+            &:focus {
+                color: $accent; 
+                text-shadow: 1px -2.5px 6.5px $accent;
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ const portfolio = {};
 portfolio.init = () => {
     portfolio.navScroll();
     portfolio.checkboxEvent();
+    portfolio.clearBtnEvent();
     portfolio.mobileNavToggle();
 };
 
@@ -180,7 +181,21 @@ portfolio.projectFilter = () => {
     if (checkedValues.length == 0) {
         projectDisplay.innerHTML = ``;
     }
-};
+}
+
+portfolio.clearBtnEvent = () => {
+    const clearBtn = document.querySelector('.clear-filter');
+    const projectSection = document.querySelector('#projects'); 
+
+    clearBtn.addEventListener('click', () => {
+        portfolio.checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                checkbox.click(); 
+            }
+        });
+        projectSection.scrollIntoView(); 
+    });
+}
 
 portfolio.navScroll = () => {
     const nav = document.querySelector('.main-nav');
@@ -197,7 +212,7 @@ portfolio.navScroll = () => {
         // Hide nav bar while scrolling down, show when scrolling up
         let currentScrollVal = window.pageYOffset;
         if (currentScrollVal > prevScrollVal) {
-            nav.style.top = '-135px';
+            nav.style.top = '-80px';
         } else {
             nav.style.top = '0';
         }

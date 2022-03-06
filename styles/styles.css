@@ -264,6 +264,7 @@ h2 {
 
 p {
   line-height: 1.5rem;
+  font-weight: 200;
 }
 
 ul, li, a, input {
@@ -459,7 +460,7 @@ img {
   width: 80vw;
   position: fixed;
   top: 0;
-  right: -80vw;
+  right: -85vw;
   z-index: 10;
   padding: 10px 70px 10px 50px;
   -webkit-transition: 0.4s ease;
@@ -619,10 +620,36 @@ header .arrow-container a:hover, header .arrow-container a:focus {
 .projects .coming-soon {
   text-align: center;
   margin-top: 55px;
+  margin-bottom: 40px;
   display: none;
 }
 .projects .coming-soon p {
   margin-bottom: 15px;
+}
+.projects .clear-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+.projects .clear-btn-container button {
+  border: none;
+  background-color: rgba(32, 32, 32, 0);
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #f4f4f9;
+  padding-bottom: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.projects .clear-btn-container button:hover, .projects .clear-btn-container button:focus {
+  color: #82C0CC;
+  text-shadow: 1px -2.5px 6.5px #82C0CC;
 }
 
 .tools .filter-input {
@@ -1050,15 +1077,18 @@ footer {
     margin-bottom: 30px;
   }
 
-  .contact .form-container form #name,
-.contact .form-container form #email {
+  .contact .wrapper .form-container form {
+    width: 95%;
+  }
+  .contact .wrapper .form-container form #name,
+.contact .wrapper .form-container form #email {
     padding: 20px 30px 15px 30px;
   }
-  .contact .form-container form #name:focus,
-.contact .form-container form #email:focus {
+  .contact .wrapper .form-container form #name:focus,
+.contact .wrapper .form-container form #email:focus {
     padding-bottom: 14px;
   }
-  .contact .form-container form textarea {
+  .contact .wrapper .form-container form textarea {
     padding: 40px 30px;
   }
 }

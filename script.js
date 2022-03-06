@@ -3,13 +3,14 @@ const portfolio = {};
 portfolio.init = () => {
     portfolio.navScroll();
     portfolio.checkboxEvent();
+    portfolio.mobileNavToggle();
 };
 
 // Project data array
 portfolio.projects = [
     {
         name: 'Ghibli Movie Night',
-        desc: `A paired programming project, inspired by our love for Studio Ghibli. Ghibli Movie Night is a quiz game where the user must select the correct movie title based on a randomly presented movie description. Built with vanilla JavaScript and a Studio Ghibli REST API.`,
+        desc: `A pair programming project, inspired by our love for Studio Ghibli. Ghibli Movie Night is a quiz game where the user must select the correct movie title based on a randomly presented movie description. Built with vanilla JavaScript and a Studio Ghibli REST API.`,
         liveurl: 'https://ghibli-movie-night.netlify.app/',
         giturl: 'https://github.com/allisonvilla/ghibli-movie-night',
         img: './assets/ghibli-app-preview.png',
@@ -44,7 +45,7 @@ portfolio.projects = [
     },
     {
         name: 'Random Zoo Animal',
-        desc: `An app that returns a random zoo animal based on user's choice of animal type. Built with vanilla JavaScript and a zoo animal REST API.`,
+        desc: `An app that displays a random zoo animal and some information about it based on user's choice of animal type. Built with vanilla JavaScript and a zoo animal REST API.`,
         liveurl: 'https://allisonvilla.github.io/random-zoo-animal/',
         giturl: 'https://github.com/allisonvilla/random-zoo-animal',
         img: './assets/zoo-app-preview.png',
@@ -196,7 +197,7 @@ portfolio.navScroll = () => {
         // Hide nav bar while scrolling down, show when scrolling up
         let currentScrollVal = window.pageYOffset;
         if (currentScrollVal > prevScrollVal) {
-            nav.style.top = '-80px';
+            nav.style.top = '-135px';
         } else {
             nav.style.top = '0';
         }
@@ -204,5 +205,14 @@ portfolio.navScroll = () => {
         prevScrollVal = currentScrollVal;
     };
 };
+
+portfolio.mobileNavToggle = () => {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    mobileNavToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('open'); 
+    })
+}
 
 portfolio.init();

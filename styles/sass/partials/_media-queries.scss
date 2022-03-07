@@ -314,6 +314,10 @@
 
     .contact {
         .wrapper {
+            .contact-link {
+                    display: none; 
+                }
+                
             .form-container {
                 form {
                     width: 95%; 
@@ -437,10 +441,6 @@
             li {
                 margin-left: 10px; 
                 margin-right: 10px; 
-
-                .contact-link {
-                    display: none; 
-                }
             }
         }
     }

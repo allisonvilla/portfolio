@@ -1164,6 +1164,9 @@ footer {
     font-size: 2rem;
   }
 
+  .contact .wrapper .contact-link {
+    display: none;
+  }
   .contact .wrapper .form-container form {
     width: 95%;
   }
@@ -1275,9 +1278,6 @@ footer {
   .contact ul li {
     margin-left: 10px;
     margin-right: 10px;
-  }
-  .contact ul li .contact-link {
-    display: none;
   }
 
   .form-success h2 {

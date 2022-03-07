@@ -790,6 +790,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  font-weight: 300;
 }
 .contact ul a i {
   font-size: 1.5rem;

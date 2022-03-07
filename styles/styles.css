@@ -1139,8 +1139,13 @@ footer {
     padding-right: 30px;
   }
 
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   header .wrapper {
-    margin-top: 0;
+    margin-top: 125px;
     margin-bottom: 0;
   }
   header .box-container {

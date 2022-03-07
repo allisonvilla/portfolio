@@ -107,12 +107,16 @@
         }
     }
 
-    h1 {
-        font-size: 5rem; 
-    }
-
-    h2 {
-        font-size: 2rem; 
+    header {
+        .box-container {
+            h1 {
+                font-size: 5rem; 
+            }
+        
+            h2 {
+                font-size: 2rem; 
+            }
+        }
     }
 
     .about-content {
@@ -126,6 +130,7 @@
 
             img {
                 width: 80%;
+                height: 375px; 
             }
         }
 
@@ -160,9 +165,14 @@
         }
     }
 
-    h1 {
-        font-size: 4.5rem; 
+    header {
+        .box-container {
+            h1 {
+                font-size: 4.5rem; 
+            }
+        }
     }
+
 
     .tools {
         .filter-input {
@@ -182,6 +192,7 @@
                     #name,
                     #email {
                         padding: 20px 30px 15px 30px;
+                        height: 60px; 
     
                         &:focus {
                             padding-bottom: 14px; 
@@ -193,6 +204,250 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    header {
+        .box-container {
+            padding: 50px 65px;
+
+            h1 {
+                font-size: 3.5rem; 
+            }
+        
+            h2 {
+                font-size: 1.3rem; 
+            }
+        }
+    }
+
+    h2 {
+        font-size: 2rem; 
+    }
+
+    section.about {
+        padding-top: 0; 
+    }
+
+    .contact {
+        .wrapper {
+            .form-container {
+                form {
+                    width: 95%; 
+                    
+                    #name,
+                    #email {
+                        padding: 15px 25px 10px 25px;
+                        width: 100%; 
+    
+                        &:focus {
+                            padding-bottom: 9px; 
+                        }
+                    }
+
+                    #name {
+                        margin-right: 0; 
+                        margin-bottom: 18px; 
+                    }
+    
+                    textarea {
+                        padding: 30px 25px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    section > .wrapper {
+        padding-left: 30px; 
+        padding-right: 30px; 
+    }
+
+    header {
+        .wrapper {
+            margin-top: 0; 
+            margin-bottom: 0; 
+        }
+
+        .box-container {
+            padding: 40px 45px;
+        }
+    }   
+
+    .mobile-nav {
+        ul {
+            li {
+                a {
+                    font-size: 1.3rem; 
+                }
+            }
+        }
+
+        &.open {
+            padding-left: 0; 
+        }
+    }
+
+    .about-content {
+        .img-container {
+            img {
+                width: 100%; 
+            }
+        }
+    }
+
+    .tools {
+        .filter-input {
+            label {
+                font-size: 0.95rem; 
+
+                i {
+                    font-size: 2rem; 
+                }
+            }
+        }
+    }
+
+    .contact {
+        .wrapper {
+            .form-container {
+                form {
+                    width: 95%; 
+                    
+                    #name,
+                    #email {
+                        padding: 10px 20px 5px 20px;
+    
+                        &:focus {
+                            padding-bottom: 4px; 
+                        }
+                    }
+    
+                    textarea {
+                        padding: 30px 20px; 
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        p {
+            font-size: 0.85rem; 
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    header {
+        .box-container {
+            padding: 40px 40px;
+
+            h1 {
+                font-size: 3rem; 
+            }
+        
+            h2 {
+                font-size: 1.2rem; 
+            }
+        }
+    }
+
+    section > .wrapper {
+        padding-left: 23px; 
+        padding-right: 23px; 
+    }
+
+    .tools {
+        .filter-input {
+            label {
+                font-size: 0.94rem; 
+                width: 50%; 
+
+                i {
+                    font-size: 2rem; 
+                }
+            }
+        }
+    }
+
+    .contact {
+        ul {
+            font-size: 0.9rem; 
+
+            li {
+                margin-left: 10px;
+                margin-right: 10px; 
+
+                a i {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 345px) {
+    header {
+        .box-container {
+            padding: 35px 25px;
+        }
+    }
+
+    .about-content {
+        p {
+            font-size: 0.9rem; 
+        }
+    }
+
+    .contact {
+        .wrapper {
+            .form-container {
+                form {
+                    width: 100%; 
+
+                    #name,
+                    #email {
+                        padding: 5px 15px 2px 15px;
+
+                        &::placeholder {
+                            font-size: 0.9rem;
+                        }
+    
+                        &:focus {
+                            padding-bottom: 1px; 
+                        }
+                    }
+    
+                    textarea {
+                        padding: 30px 15px; 
+
+                        &::placeholder {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            li {
+                margin-left: 10px; 
+                margin-right: 10px; 
+
+                .contact-link {
+                    display: none; 
+                }
+            }
+        }
+    }
+
+    .form-success {
+        h2 {
+            font-size: 1.5rem;
         }
     }
 }

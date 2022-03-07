@@ -633,7 +633,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .projects .clear-btn-container button {
   border: none;
@@ -1022,11 +1022,10 @@ footer {
     font-size: 1.8rem;
   }
 
-  h1 {
+  header .box-container h1 {
     font-size: 5rem;
   }
-
-  h2 {
+  header .box-container h2 {
     font-size: 2rem;
   }
 
@@ -1048,6 +1047,7 @@ footer {
   }
   .about-content .img-container img {
     width: 80%;
+    height: 375px;
   }
   .about-content .text-container {
     margin-top: 50px;
@@ -1068,7 +1068,7 @@ footer {
     font-size: 1.5rem;
   }
 
-  h1 {
+  header .box-container h1 {
     font-size: 4.5rem;
   }
 
@@ -1083,6 +1083,7 @@ footer {
   .contact .wrapper .form-container form #name,
 .contact .wrapper .form-container form #email {
     padding: 20px 30px 15px 30px;
+    height: 60px;
   }
   .contact .wrapper .form-container form #name:focus,
 .contact .wrapper .form-container form #email:focus {
@@ -1090,5 +1091,196 @@ footer {
   }
   .contact .wrapper .form-container form textarea {
     padding: 40px 30px;
+  }
+}
+@media (max-width: 530px) {
+  header .box-container {
+    padding: 50px 65px;
+  }
+  header .box-container h1 {
+    font-size: 3.5rem;
+  }
+  header .box-container h2 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  section.about {
+    padding-top: 0;
+  }
+
+  .contact .wrapper .form-container form {
+    width: 95%;
+  }
+  .contact .wrapper .form-container form #name,
+.contact .wrapper .form-container form #email {
+    padding: 15px 25px 10px 25px;
+    width: 100%;
+  }
+  .contact .wrapper .form-container form #name:focus,
+.contact .wrapper .form-container form #email:focus {
+    padding-bottom: 9px;
+  }
+  .contact .wrapper .form-container form #name {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  .contact .wrapper .form-container form textarea {
+    padding: 30px 25px;
+  }
+}
+@media (max-width: 445px) {
+  section > .wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  header .wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  header .box-container {
+    padding: 40px 45px;
+  }
+
+  .mobile-nav ul li a {
+    font-size: 1.3rem;
+  }
+  .mobile-nav.open {
+    padding-left: 0;
+  }
+
+  .about-content .img-container img {
+    width: 100%;
+  }
+
+  .tools .filter-input label {
+    font-size: 0.95rem;
+  }
+  .tools .filter-input label i {
+    font-size: 2rem;
+  }
+
+  .contact .wrapper .form-container form {
+    width: 95%;
+  }
+  .contact .wrapper .form-container form #name,
+.contact .wrapper .form-container form #email {
+    padding: 10px 20px 5px 20px;
+  }
+  .contact .wrapper .form-container form #name:focus,
+.contact .wrapper .form-container form #email:focus {
+    padding-bottom: 4px;
+  }
+  .contact .wrapper .form-container form textarea {
+    padding: 30px 20px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 390px) {
+  header .box-container {
+    padding: 40px 40px;
+  }
+  header .box-container h1 {
+    font-size: 3rem;
+  }
+  header .box-container h2 {
+    font-size: 1.2rem;
+  }
+
+  section > .wrapper {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .tools .filter-input label {
+    font-size: 0.94rem;
+    width: 50%;
+  }
+  .tools .filter-input label i {
+    font-size: 2rem;
+  }
+
+  .contact ul {
+    font-size: 0.9rem;
+  }
+  .contact ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .contact ul li a i {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 345px) {
+  header .box-container {
+    padding: 35px 25px;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+
+  .contact .wrapper .form-container form {
+    width: 100%;
+  }
+  .contact .wrapper .form-container form #name,
+.contact .wrapper .form-container form #email {
+    padding: 5px 15px 2px 15px;
+  }
+  .contact .wrapper .form-container form #name::-webkit-input-placeholder, .contact .wrapper .form-container form #email::-webkit-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form #name::-moz-placeholder, .contact .wrapper .form-container form #email::-moz-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form #name:-ms-input-placeholder, .contact .wrapper .form-container form #email:-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form #name::-ms-input-placeholder, .contact .wrapper .form-container form #email::-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form #name::placeholder,
+.contact .wrapper .form-container form #email::placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form #name:focus,
+.contact .wrapper .form-container form #email:focus {
+    padding-bottom: 1px;
+  }
+  .contact .wrapper .form-container form textarea {
+    padding: 30px 15px;
+  }
+  .contact .wrapper .form-container form textarea::-webkit-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form textarea::-moz-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form textarea:-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form textarea::-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact .wrapper .form-container form textarea::placeholder {
+    font-size: 0.9rem;
+  }
+  .contact ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .contact ul li .contact-link {
+    display: none;
+  }
+
+  .form-success h2 {
+    font-size: 1.5rem;
   }
 }

@@ -187,14 +187,16 @@ portfolio.clearBtnEvent = () => {
     const clearBtn = document.querySelector('.clear-filter');
     const projectSection = document.querySelector('#projects'); 
 
-    clearBtn.addEventListener('click', () => {
-        portfolio.checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) {
-                checkbox.click(); 
-            }
+    if (clearBtn != null) {
+        clearBtn.addEventListener('click', () => {
+            portfolio.checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    checkbox.click(); 
+                }
+            });
+            projectSection.scrollIntoView(); 
         });
-        projectSection.scrollIntoView(); 
-    });
+    }
 }
 
 portfolio.navScroll = () => {
@@ -212,7 +214,7 @@ portfolio.navScroll = () => {
         // Hide nav bar while scrolling down, show when scrolling up
         let currentScrollVal = window.pageYOffset;
         if (currentScrollVal > prevScrollVal) {
-            nav.style.top = '-80px';
+            nav.style.top = '-82px';
         } else {
             nav.style.top = '0';
         }

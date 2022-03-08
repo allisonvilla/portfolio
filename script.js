@@ -183,6 +183,7 @@ portfolio.projectFilter = () => {
     }
 }
 
+// Clear all the filters on click 
 portfolio.clearBtnEvent = () => {
     const clearBtn = document.querySelector('.clear-filter');
     const projectSection = document.querySelector('#projects'); 
@@ -199,6 +200,7 @@ portfolio.clearBtnEvent = () => {
     }
 }
 
+// Adjust nav bar styles on scroll
 portfolio.navScroll = () => {
     const nav = document.querySelector('.main-nav');
     let prevScrollVal = 0;
@@ -214,15 +216,15 @@ portfolio.navScroll = () => {
         // Hide nav bar while scrolling down, show when scrolling up
         let currentScrollVal = window.pageYOffset;
         if (currentScrollVal > prevScrollVal) {
-            nav.style.top = '-82px';
+            nav.style.top = '-85px';
         } else {
             nav.style.top = '0';
         }
-
         prevScrollVal = currentScrollVal;
     };
 };
 
+// Toggle for slide-out mobile nav
 portfolio.mobileNavToggle = () => {
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mobileNav = document.querySelector('.mobile-nav');

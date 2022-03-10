@@ -214,13 +214,13 @@ portfolio.navScroll = () => {
         }
 
         // Hide nav bar while scrolling down, show when scrolling up
-        let currentScrollVal = window.pageYOffset;
-        if (currentScrollVal > prevScrollVal) {
-            nav.style.top = '-85px';
-        } else {
-            nav.style.top = '0';
-        }
-        prevScrollVal = currentScrollVal;
+        // let currentScrollVal = window.pageYOffset;
+        // if (currentScrollVal > prevScrollVal) {
+        //     nav.style.top = '-85px';
+        // } else {
+        //     nav.style.top = '0';
+        // }
+        // prevScrollVal = currentScrollVal;
     };
 };
 

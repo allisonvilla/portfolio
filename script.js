@@ -78,7 +78,6 @@ portfolio.projects = [
             'responsive',
             'accessibility',
             'rest',
-            'featured',
         ],
     },
     {

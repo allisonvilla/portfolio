@@ -10,6 +10,25 @@ portfolio.init = () => {
 // Project data array
 portfolio.projects = [
     {
+        name: 'Indie Game Finder',
+        desc: `Indie Game Finder is a React application that suggests an indie game for users based on their chosen parameters by filtering through large amounts of paginated data returned by an API. Users are also able to leave reviews for games, which are stored on a Firebase Realtime Database.`,
+        liveurl: 'https://indie-game-finder.netlify.app/',
+        giturl: 'https://github.com/allisonvilla/indie-game-finder',
+        img: './assets/indie-game-app-preview.png',
+        tools: [
+            'js',
+            'html',
+            'css',
+            'react',
+            'firebase',
+            'git',
+            'terminal',
+            'responsive',
+            'rest',
+            'featured',
+        ],
+    },
+    {
         name: 'Ghibli Movie Night',
         desc: `A pair programming project, inspired by our love for Studio Ghibli. Ghibli Movie Night is a quiz game where the user must select the correct movie title based on a randomly presented movie description. Built with vanilla JavaScript and a Studio Ghibli REST API.`,
         liveurl: 'https://ghibli-movie-night.netlify.app/',

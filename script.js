@@ -11,7 +11,7 @@ portfolio.init = () => {
 portfolio.projects = [
     {
         name: 'Indie Game Finder',
-        desc: `A React single page application that suggests an indie game for users based on their chosen parameters by filtering through large amounts of paginated data returned by an API. Users are also able to leave reviews for games, which are stored on a Firebase Realtime Database.`,
+        desc: `A React single page application that suggests an indie game for users based on their chosen parameters by filtering through paginated data returned by an API. Users are also able to leave reviews for games, which are stored on a Firebase Realtime Database.`,
         liveurl: 'https://indie-game-finder.netlify.app/',
         giturl: 'https://github.com/allisonvilla/indie-game-finder',
         img: './assets/indie-game-app-preview.png',

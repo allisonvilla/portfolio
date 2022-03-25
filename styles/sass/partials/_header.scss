@@ -32,8 +32,7 @@ header {
             font-weight: 300;
             font-family: $headingFont; 
     
-            &:hover,
-            &:focus {
+            &:hover {
                 border-bottom: none; 
                 box-shadow: none;
             }

@@ -328,7 +328,7 @@ a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-a:hover, a:focus {
+a:hover {
   border-bottom: 2px solid #82C0CC;
   -webkit-box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.5em -0.5em;
           box-shadow: rgba(130, 192, 204, 0.8) 0 0.5em 0.5em -0.5em;
@@ -377,7 +377,7 @@ img {
           box-shadow: none;
   font-size: 1.3rem;
 }
-.main-nav .logo a:hover, .main-nav .logo a:focus {
+.main-nav .logo a:hover {
   border-bottom: none;
   color: #82C0CC;
 }
@@ -572,7 +572,7 @@ header .arrow-container a {
   font-weight: 300;
   font-family: "Quicksand", sans-serif;
 }
-header .arrow-container a:hover, header .arrow-container a:focus {
+header .arrow-container a:hover {
   border-bottom: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -647,7 +647,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   transition: 0.3s;
   cursor: pointer;
 }
-.projects .clear-btn-container button:hover, .projects .clear-btn-container button:focus {
+.projects .clear-btn-container button:hover {
   color: #82C0CC;
   text-shadow: 1px -2.5px 6.5px #82C0CC;
 }
@@ -909,7 +909,7 @@ header .arrow-container a:hover, header .arrow-container a:focus {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.contact .form-container form button:hover, .contact .form-container form button:focus {
+.contact .form-container form button:hover {
   border: 1px solid #82C0CC;
   -webkit-box-shadow: rgba(130, 192, 204, 0.8) 0 0.4em 0.6em -0.6em;
           box-shadow: rgba(130, 192, 204, 0.8) 0 0.4em 0.6em -0.6em;

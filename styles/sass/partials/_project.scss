@@ -36,8 +36,7 @@
             transition: 0.3s; 
             cursor: pointer; 
     
-            &:hover,
-            &:focus {
+            &:hover {
                 color: $accent; 
                 text-shadow: 1px -2.5px 6.5px $accent;
             }

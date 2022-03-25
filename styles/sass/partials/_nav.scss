@@ -23,8 +23,7 @@
             box-shadow: none; 
             font-size: 1.3rem; 
 
-            &:hover,
-            &:focus {
+            &:hover {
                 border-bottom: none; 
                 color: $accent; 
             }

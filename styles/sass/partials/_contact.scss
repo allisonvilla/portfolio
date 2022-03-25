@@ -116,8 +116,7 @@
                 padding-bottom: 20px; 
                 transition: 0.3s; 
 
-                &:hover,
-                &:focus {
+                &:hover {
                     border: 1px solid $accent; 
                     box-shadow: rgba($color: $accent, $alpha: 0.8) 0 0.4em 0.6em -0.6em;
                     text-shadow: 1px -2.5px 6.5px $accent;
